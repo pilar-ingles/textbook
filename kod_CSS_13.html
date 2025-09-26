@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+    <style>
+        .text-ul {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+    <style>
+        .text-p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-indent: 50px;
+        }
+    </style>
+    <style>
+        .text-dec {
+            text-decoration: underline;
+        }
+    </style>
+    <title>CSS - анимации</title>
+</head>
+
+<body>
+    <h2 align="center">CSS стили для анимаций (автоматически повторяющиеся ключевые кадры с плавным
+        переходом)</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th width="200px">Тег</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center"> <b>@keyframes</b> </td>
+                <td>
+                    <p class="text-p">
+                        Содержит имя анимации и устанавливает ключевые кадры, которые создаются с помощью ключевых слов <i>from
+                        (0%) и to (100%)</i> или с помощью любого числа процентных пунктов.
+                    </p>
+                    <p> <i>   @keyframes cloud {
+                            from { right: -100%; top: -50%; }
+                            to { right: 100%; top: 0; } }   </i>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>animation-name</b> </td>
+                <td>
+                    <p class="text-p">Имя анимации.</p> 
+                    <p>
+                        Текстовая строка, которая должна начинаться с латинской буквы или подчёркивания (_),
+                        может содержать также цифры от 0 до 9 и дефис (-).
+                    </p>
+                    <p><i>{animation-name:cloud}</i></p>
+                    <p>
+                        Объектная модель:
+                        document.getElementById("elementID").style.animationName
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>animation-duration</b> </td>
+                <td><p class="text-p">Устанавливает продолжительность анимации в секундах или миллисекундах.</p>
+                    <p><i>{animation-duration:0.3s;}</i></p>
+                    <p class="text-p">или</p>
+                    <p><i>{animation-duration:300ms;}</i></p> 
+                    <p>
+                        Объектная модель:
+                        document.getElementById("elementID").style.animationDuration
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>animation-timing-function</b> </td>
+                <td><p class="text-p">Устанавливает временную функцию изменения скорости перехода.</p> 
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения:</p>
+                        <li>
+                           <i>ease</i> – Анимация начинается медленно, резко ускоряется, а затем постепенно замедляется к концу (по
+                            умолчанию).
+                        </li>
+                        <li><i>ease-in</i> – Анимация начинается медленно, ускоряется к концу.</li>
+                        <li><i>ease-out</i> – Анимация начинается быстро, замедляется к концу.</li>
+                        <li><i>ease-in-out</i> – Анимация начинается медленно, потом ускоряется и замедляется к концу.</li>
+                        <li><i>linear</i> – Анимация начинается и заканчивается с одинаковой скоростью.</li>
+                        <li><i>cubic-bezier</i> – Скорость анимации задается в виде кривой Безье.</li>
+                        <li>
+                           <i>steps(k,start|end)</i> – Пошаговая анимация. Первый параметр – количество шагов. Второй параметр –
+                            момент начала анимации:
+                            <table border="1">
+                                <tr><th>Параметр</th> <th align="center">Действие</th></tr>
+                                <tr><td align="center">start</td> <td>анимация начинается в начале каждого шага</td></tr>
+                                <tr><td align="center">end</td> <td>анимация начинается в конце каждого шага с задержкой</td></tr>
+                            </table>
+                        </li>
+                    </ul>
+                    <p>
+                        Объектная модель:
+                        document.getElementById("elementID").style.animationTimingFunction
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>animation-delay</b> </td>
+                <td><p class="text-p">Устанавливает задержку анимации в секундах или миллисекундах.</p>
+                    <p><i>{animation-delay:0.3s;}</i></p>
+                    <p class="text-p">или</p>
+                    <p><i>{animation-delay:300ms;}</i></p>
+                    <p class="text-p">Значание по умолчаню – 0s (без задержки).</p>
+                    <p>
+                        Объектная модель:
+                        document.getElementById("elementID").style.animationDelay
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>animation-iteration-count</b> </td>
+                <td><p class="text-p">Устанавливает число повторов анимации.</p> 
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения:</p>
+                        <li>
+                           <i>n</i> – Положительное число повторов анимации. Если n = 0.5, то анимация пройдет половину своего
+                            цикла.
+                        </li>
+                        <li><i>infinite</i> – Бесконечное число повторов анимации.</li>
+                    </ul>
+                   <p>
+                        Объектная модель:
+                        document.getElementById("elementID").style.animationIterationCount
+                   </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>animation-direction</b> </td>
+                <td><p class="text-p">Устанавливает направление анимации.</p> 
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения:</p>
+                        <li><i>normal</i> – Анимация идет с начала до конца, затем возвращается к исходному состоянию (по умолчанию).</li>
+                        <li><i>alternate</i> – Анимация идет с начала до конца, затем в обратном направлении.</li>
+                        <li><i>reverse</i> – Анимация идет с конца до начала, затем возвращается к исходному состоянию.</li>
+                        <li><i>alternate-reverse</i> – Анимация идёт с конца до начала, затем в обратном направлении.</li>
+                    </ul>
+                    <p>
+                        Объектная модель:
+                        document.getElementById("elementID").style.animationDirection
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>animation-play-state</b> </td>
+                <td><p class="text-p">Устанавливает проигрывать или остановить анимацию.</p> 
+                    <ul class="text-ul">
+                       <p class="text-dec"> Значения:</p>
+                        <li><i>runing</i> – Проигрывать анимацию (по умолчанию).</li>
+                        <li><i>paused</i> – Остановить анимацию.</li>
+                    </ul>
+                    <p>
+                        Объктная модель:
+                        document.getElementById("elementID").style.animationPlayState
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>animation-fill-mode</b> </td>
+                <td>
+                    <p class="text-p">
+                        Устанавливает, какие стили применяются к элементу, когда анимация не проигрывается (до начала, после
+                        завершения, при остановке).
+                    </p>
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения:</p>
+                        <li><i>forwards</i> – По окончанию анимации к элементу применяется стиль последнего ключевого кадра.</li>
+                        <li>
+                           <i>backwards</i> – На протяжении времени, заданного animation-delay, к элементу применяется стиль первого
+                            ключевого кадра.
+                        </li>
+                        <li><i>both</i> – К элементу применяется и правило <i>forwards</i>, и правило <i>backwards</i>.</li>
+                    </ul>
+                    <p>
+                        Объектная модель:
+                        document.getElementById("elementID").style.animationFillMode
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>animation</b> </td>
+                <td><p class="text-p">Устанавливает сразу несколько параметров анимации.</p>
+                    <p> <i>  animation-name || animation-duration || [animation-timing-function] || [animation-delay]||
+                            [animation-iteration-count] || [animation-direction] || [animation-fill-mode] ||
+                            [animation-play-state] </i> </p>
+                    <p class="text-p"><i>{animation: cloud 15s linear infinite;}</i></p>
+                    <p>
+                        Объектная модель:
+                        document.getElementById("elementID").style.animation
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="0" width="100%" align="center">
+        <tr>
+            <th> <a href="./kod_CSS_0.html"> &#60 CSS-начало</a></th>
+            <!-- <th><a href="./kod_CSS_2.html"> CSS стили для фона &#62</a></th>-->
+        </tr>
+    </table>
+</body>
+
+</html>

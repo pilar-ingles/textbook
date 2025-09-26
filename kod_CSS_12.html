@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+    <style>
+        .text-ul {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+    <style>
+        .text-p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-indent: 50px;
+        }
+    </style>
+    <style>
+        .text-dec {
+            text-decoration: underline;
+        }
+    </style>
+    <title>CSS - трансформации</title>
+</head>
+
+<body>
+    <h2 align="center">CSS стили для трансформаций (изменение размера, поворот, сдвиг и искажение
+        элемента) </h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th width="120px">Тег</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center"> <b>transform</b> </td>
+                <td>
+                    <p class="text-p">Устанавливает вид трасформации.</p>
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения:</p>
+                        <li>
+                            <i>matrix(a, c, b, d, tx, ty)</i> – Одновременное применение нескольких трансформаций.
+                            <table border="1">
+                                <tr>
+                                    <th align="center">Значение</th>
+                                    <th align="center">Действие</th>
+                                </tr>
+                                <tr>
+                                    <td align="center"> a</td>
+                                    <td>
+                                            Изменение размера по горизонтали, a &#62 1 – увеличение,0 &#60 a &#60 1 – уменьшение.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center"> c</td>
+                                    <td>
+                                        Искажение стороны элемента по оси Y, 
+                                        c &#62 – вверх,
+                                        c &#60 0 – вниз.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">b</td>
+                                    <td>
+                                        Искажение стороны элемента по оси X, 
+                                        b &#62 0 – влево, 
+                                        b &#60 0 – вправо.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">d</td>
+                                    <td>
+                                        Изменение размера по вертикали, 
+                                        d &#62 1 – увеличение, 
+                                        0 &#60 d &#60 1 – уменьшение.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">tx</td>
+                                    <td>
+                                        Сдвиг элемент по оси X, 
+                                        tx &#62 0 – влево, 
+                                        tx &#60 0 – вправо.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">ty</td>
+                                    <td>
+                                        Сдвиг элемент по оси Y, 
+                                        ty &#62 0 – вверх, 
+                                        ty &#60 0 - вниз.
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <i>rotate(угол)</i> – Поворот элемента на заданное количество
+                            градусов (deg), угол &#60 0 – против часовой стрелки, угол &#62 0 – по часовой
+                            стрелке.
+                        </li>
+                        <li>
+                            <i>scale(x,y)</i> – Изменение размера элемента,
+                            x – изменение ширины элемента, y – изменение высоты элемента,
+                            x,y &#62 1 – увеличение, 0 &#60 x,y &#60 1 – уменьшение. x,y &#60 0 – зеркальное
+                            отображение элемента.
+                        </li>
+                        <li>
+                            <i>scaleX(x)</i> – Изменение ширины элемента, x &#62 1 –
+                            увеличение, 0 &#60 x &#60 1 – уменьшение, x &#60 0 – зеркальное отображение
+                            элемента.
+                        </li>
+                        <li>
+                            <i>scaleY(y)</i> – Изменение высоты элемента, y &#62 1 –
+                            увеличение, 0 &#60 y &#60 1 – уменьшение, y &#60 0 – зеркальное отображение
+                            элемента. 
+                        </li>
+                        <li>
+                            <i>skew(x-угол,y-угол)</i> – Искажение по
+                            горизонтали на x-угол, искажение по вертикали на y-угол, x-угол &#62
+                            0 – искажение влево, x-угол &#60 0 – искажение вправо, y-угол &#62 0 –
+                            искажение вверх, y-угол &#60 0 – искажение вниз.
+                        </li>
+                        <li>
+                            <i>skewX(x-угол)</i> – Искажение по горизонтали на заданный
+                            угол, x-угол &#62 0 – искажение влево, x-угол &#60 0 –
+                            искажение вправо.
+                        </li>
+                        <li>
+                            <i>skewY(y-угол)</i> – Искажение по
+                            вертикали на заданный угол, y-угол &#62 0 – искажение
+                            вверх, y-угол &#60 0 – искажение вниз. 
+                        </li>
+                        <li>
+                            <i>translate(tx,ty)</i> – Сдвиг по горизонтали на tx,
+                            сдвиг по вертикали на ty, tx &#62 0 – сдвиг вправо,
+                            tx &#60 0 – сдвиг влево, ty &#62 0 – сдвиг вниз, ty &#60 0
+                            – сдвиг вверх.
+                        </li>
+                        <li>
+                            <i>translateX(tx)</i> – Сдвиг
+                            по горизонтали на tx, tx &#62 0 – сдвиг
+                            вправо, tx &#60 0 – сдвиг влево.
+                        </li>
+                        <li>
+                            <i>translateY(ty)</i> – Сдвиг по вертикали
+                            на ty, ty &#62 0 – сдвиг вниз, ty &#60 0 –
+                            сдвиг вверх.
+                        </li>
+                    </ul>
+                    <p>
+                        Объектная модель:
+                        document.getElementById("elementID").style.transform
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>transform-origin</b> </td>
+                <td><p class="text-p">Устанавливает центр трансформации.</p>
+                    <table border="1">
+                        Имеет 2 параметра: 
+                        <tr><th>Параметр</th> <th>Значение</th></tr>
+                        <tr>
+                           <td> x-координата</td> 
+                           <td>
+                                число с единицами длины | проценты | left | center | right
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> y-координата</td> 
+                           <td>
+                                число с единицами длины | проценты | top | center | bottom
+                           </td>
+                        </tr>
+                    </table>
+                    <p class="text-p">По умолчанию трансформация происходит относительно центра элемента.</p> 
+                    <p>
+                        Объектная модель:
+                        document.getElementById("elementID").style.transformOrigin
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="0" width="100%" align="center">
+        <tr>
+            <th> <a href="./kod_CSS_0.html"> &#60 CSS-начало</a></th>
+            <th><a href="./kod_CSS_13.html"> CSS стили для анимаций &#62</a></th>
+        </tr>
+    </table>
+</body>
+
+</html>

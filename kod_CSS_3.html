@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>  p { margin-top: 0px; margin-bottom: 0px; }  </style>
+    <style> .text-ul { margin-top: 0px; margin-bottom: 0px; } </style>
+    <style> .text-p { margin-top: 0px; margin-bottom: 0px; text-indent: 50px; } </style>
+    <style> .text-dec { text-decoration: underline; } </style>
+    <title>CSS - поля и отступы</title>
+</head>
+
+<body>
+    <h2 align="center">CSS стили для полей и отступов </h2>
+    <table border="1" >
+        <thead>
+            <tr>
+                <th width="120px">Тег</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center"> <b>margin</b> </td>
+                <td >Устанавливает величину отступов от каждого края элемента.
+                    Отступом является пространство от границы текущего элемента до внутренней границы его родительского
+                    элемента.
+                    <p> Можно использовать одно, два, три или четыре значения, разделяя их между собой пробелом.
+                        Эффект зависит от количества значений и приведен в табл.
+                    </p>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Число значений </th>
+                                <th>Результат</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td align="center">1</td>
+                                <td> Поля будут установлены для всех сторон содержимого элемента.</td>
+                            </tr>
+                            <tr>
+                                <td align="center">2</td>
+                                <td>Первое значение устанавливает поле от верхнего и нижнего края содержимого, второе -
+                                    от левого и
+                                    правого.</td>
+                            </tr>
+                            <tr>
+                                <td align="center">3</td>
+                                <td>Первое значение задает поле от верхнего края содержимого, второе - одновременно от
+                                    левого и правого
+                                    края, а третье - от нижнего края.</td>
+                            <tr>
+                                <td align="center">4</td>
+                                <td>Поочередно устанавливаются поля от верхнего, правого, нижнего и левого края
+                                    содержимого.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Задается в пикселях (px), процентах (%) или других единицах измерения. Допустимо отрицательное
+                        значение.
+                    </p>
+                    <p>Если указать отступ auto, то он будет рассчитан браузером автоматически.</p>
+                    <p class="text-dec">Пример</p>
+                    У соседних блоков вертикальные отступы не суммируются, а объединяются.
+                    <ul class="text-ul">Объединение не происходит:
+                        <li>если у блоков на стороне объединения задано свойство padding,</li>
+                        <li>если у блоков на стороне объединения задано свойство border,</li>
+                        <li>если у блоков задано свойство position:absolute,</li>
+                        <li>если у блоков задано свойство float,</li>
+                        <li>для flex-элементов.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr> 
+                <td align="center"> <b>margin-bottom</b> </td>
+                <td>Отступ снизу элемента.
+                    <p>Объектная модель: document.getElementById("elementID").style.marginBottom</p>
+                </td>
+            </tr>
+            <tr> 
+                <td align="center"> <b>margin-left </b> </td>
+                <td>Отступ слева элемента.
+                    <p>Объектная модель: document.getElementById("elementID").style.marginLeft</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b> margin-right</b> </td>
+                <td>Отступы снизу, слева, справа, сверху элемента соответственно.
+                    <p>Объектная модель: document.getElementById("elementID").style.marginRight</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">  <b>margin-top </b> </td>
+                <td>Отступы снизу, слева, справа, сверху элемента соответственно.
+                    <p>Объектная модель: document.getElementById("elementID").style.marginTop</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>padding</b> </td>
+                <td>Устанавливает значение полей вокруг содержимого элемента.
+                    <p>
+                        Полем называется расстояние от внутреннего края рамки элемента до воображаемого прямоугольника,
+                        ограничивающего его содержимое.
+                    </p>
+                    <p>Можно использовать одно, два, три или четыре значения, разделяя их между собой пробелом.</p> 
+                    <p>Эффект зависит от количества значений и приведен в табл.</p>
+                    <table border="1" >
+                        <thead>
+                            <tr>
+                                <th>Число значений </th>
+                                <th>Результат</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td align="center">1</td> <td>Поля будут установлены для всех сторон содержимого элемента.</td></tr>
+                            <tr>
+                               <td align="center"> 2</td> 
+                               <td>
+                                   Первое значение устанавливает поле от верхнего и нижнего края содержимого, второе - от
+                                    левого и правого.
+                               </td>
+                            </tr>
+                            <tr>
+                               <td align="center"> 3</td> 
+                               <td>
+                                   Первое значение задает поле от верхнего края содержимого, второе - одновременно от левого
+                                    и правого края, а третье - от нижнего края.
+                               </td>
+                            </tr>
+                            <tr><td align="center">4</td> <td>Поочередно устанавливаются поля от верхнего, правого, нижнего и левого края содержимого.</td></tr>
+                        </tbody>
+                    </table>
+                            <img src="./picture/padding.gif" lt="padding">
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>padding-bottom </b> </td>
+                <td>Поля снизу, слева, справа, сверху элемента соответственно.
+                    <p>Объектная модель: document.getElementById("elementID").style.paddingBottom</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>padding-left</b> </td>
+                <td>Поля снизу, слева, справа, сверху элемента соответственно.
+                    <p>Объектная модель: document.getElementById("elementID").style.paddingLeft</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>padding-right </b> </td>
+                <td>Поля снизу, слева, справа, сверху элемента соответственно.
+                    <p>Объектная модель: document.getElementById("elementID").style.paddingRight</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>padding-top </b> </td>
+                <td>Поля снизу, слева, справа, сверху элемента соответственно.
+                    <p>Объектная модель: document.getElementById("elementID").style.paddingRight</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>scroll-margin-top</b> </td>
+                <td>Верхний отступ, который будет использовать браузер при переходе к якорному элементу.
+                    Задается в тех же единицах измерения, что и margin.
+                    <p>
+                        Если на экране есть зафиксированный блок навигации, то при переходе на конкретный раздел страницы
+                        его заголовок может быть закрыт этим блоком. Задав в качестве значения scroll-margin-top сумму
+                        высоты блока навигации и отступа до заголовка раздела, мы решим эту проблему.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="0" width="100%" align="center">
+        <tr>
+            <th> <a href="./kod_CSS_0.html"> &#60 CSS-начало</a></th>
+            <th><a href="./kod_CSS_4.html"> CSS стили для рамок &#62</a></th>
+        </tr>
+    </table>
+</body>
+
+</html>

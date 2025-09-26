@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+    <style>
+        .text-ul {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+    <style>
+        .text-p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-indent: 50px;
+        }
+    </style>
+    <style>
+        .text-dec {
+            text-decoration: underline;
+        }
+    </style>
+    <title>CSS - переходы</title>
+</head>
+
+<body>
+    <h2 align="center">CSS стили для переходов (изменение значений CSS-свойств элемента в течение заданного времени)
+    </h2>
+    <p align="center">
+        Смена свойств происходит при наступлении определенного события. </p>
+       <p align="center"> Например, при наведении указателя мышки (псевдокласс
+        <i>:hover</i>) или при клике (переключение классов с помощью JavaScript).
+    </p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th width="200px">Тег</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center"> <b>transition-property</b> </td>
+                <td>
+                    <p  class="text-p">Устанавливает к каким CSS-свойствам будет применен эффект перехода.</p>
+                    <ul  class="text-ul">
+                        <p  class="text-dec">Значения:</p>
+                        <li><i>all</i> – Все свойства элемента (по умолчанию).</li>
+                        <li>
+                           <i>свойства</i> – Одно или несколько свойств элемента, указанных через запятую.
+                            <i>
+                                div.block {backgrond-color:#0ff;transition-property:backgrond-color;}
+                                div.block:hover {backgrond-color:#ff0;}
+                            </i>
+                        </li>
+                    </ul>
+                    <p>
+                        Объектная модель:
+                        document.getElementById("elementID").style.transitionProperty
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>transition-duration</b> </td>
+                <td>
+                    <p  class="text-p">Устанавливает продолжительность перехода в секундах или миллисекундах.</p>
+                    <p><i>div.block {transition-duration:0.3s;}</i></p>
+                    <p  class="text-p">или</p>
+                    <p><i>div.block {transition-duration:300ms;}</i></p>
+                    <p>
+                        Объектная модель:
+                        document.getElementById("elementID").style.transitionDuration
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>transition-timing-function</b> </td>
+                <td>
+                    <p  class="text-p">Устанавливает временную функцию изменения скорости перехода.</p>
+                    <ul class="text-ul">
+                       <p  class="text-dec"> Значения:</p>
+                        <li>
+                           <i>ease</i> – Переход начинается медленно, резко ускоряется, а затем постепенно замедляется к концу (по
+                            умолчанию).
+                        </li>
+                        <li><i>ease-in</i> – Переход начинается медленно, ускоряется к концу.</li>
+                        <li><i>ease-out</i> – Переход начинается быстро, замедляется к концу.</li>
+                        <li>
+                           <i> ease-in-out</i> – Переход начинается медленно, постепенно ускоряется, а затем постепенно замедляется к
+                            концу.
+                        </li>
+                        <li><i>linear</i> – Переход начинается и заканчивается с одинаковой скоростью.</li>
+                        <li><i>cubic-bezier</i> – Скорость перехода задается в виде кривой Безье.</li>
+                    </ul>
+                    <p>
+                        Объектная модель:
+                        document.getElementById("elementID").style.transitionTimingFunction
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>transition-delay</b> </td>
+                <td>
+                    <p  class="text-p">Устанавливает задержку перехода в секундах или миллисекундах.</p>
+                    <p> <i>div.block {transition-delay:0.3s;}</i></p>
+                        <p class="text-p">или</p>
+                        <p><i>div.block {transition-delay:300ms;}</i></p>
+                    <p class="text-p">Значание по умолчаню – 0s (без задержки).</p>
+                    <p>
+                        Объектная модель:
+                        document.getElementById("elementID").style.transitionDelay
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>transition</b> </td>
+                <td>
+                    <p  class="text-p">Устанавливает сразу несколько параметров перехода.</p>
+                    <p><i>[transition-property]||transition-duration||[transition-timing-function]||[transition-delay]</i></p>
+                    <p><i>div.block {transition: backgrond-color 0.3s linear;}</i> </p>
+                    <p>
+                        Объектная модель:
+                        document.getElementById("elementID").style.transition
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="0" width="100%" align="center">
+        <tr>
+            <th> <a href="./kod_CSS_0.html"> &#60 CSS-начало</a></th>
+            <th><a href="./kod_CSS_12.html"> CSS стили для трансформаций &#62</a></th>
+        </tr>
+    </table>
+</body>
+
+</html>

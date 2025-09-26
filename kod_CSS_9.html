@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+    <style>
+        .text-ul {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+    <style>
+        .text-p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-indent: 50px;
+        }
+    </style>
+    <style>
+        .text-dec {
+            text-decoration: underline;
+        }
+    </style>
+    <title>CSS - списки</title>
+</head>
+
+<body>
+    <h2 align="center">CSS стили для списков </h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th width="150px">Тег</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center"> <b>list-style-image</b> </td>
+                <td>
+                    <p class="text-p">
+                        Устанавливает url изображения, которое служит маркером списка. Это свойство наследуется, поэтому
+                        для отдельных элементов списка для восстановления маркера используется значение none.</p>
+                        <p class="text-p">Возможные значения: <i>none | url('путь к файлу')</i>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>list-style-position</b> </td>
+                <td>
+                    <p class="text-p">Определяет, как будет размещаться маркер относительно текста.</p>
+                    <ul class="text-ul" list-style-image="none" list-style-type="none">
+                        <p class="text-dec" >Значения:</p>
+                        <li><i>outside</i> - Маркер вынесен за границу элемента списка.</li>
+                        <li><i>inside</i> - Маркер обтекается текстом.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>list-style-type</b> </td>
+                <td>
+                    <p class="text-p">
+                        Изменяет вид маркера для каждого элемента списка. Этот атрибут используется только в случае, когда
+                        значение свойства list-style-image установлено как none.</p> 
+                        Маркеры различаются для маркированного списка <i>ul</i> и нумерованного <i>ol</i>.
+                        <table border="1" >
+                            <tr><th align="center" width="120px">Вид</th> <th align="center">Значения</th></tr>
+                                <tr><td align="center">•</td> <td align="center">disc (по умолчанию)</td></tr>
+                                <tr><td align="center">o</td> <td align="center">circle</td></tr>
+                                <tr><td align="center"></td> <td align="center">square</td></tr>
+                                <tr><td align="center">4.</td> <td align="center">decimal</td></tr>
+                                <tr><td align="center">v.</td> <td align="center">lower-roman</td></tr>
+                                <tr><td align="center">VI.</td> <td align="center">upper-roman</td></tr>
+                                <tr><td align="center">g.</td> <td align="center">lower-alpha</td></tr>
+                                <tr><td align="center">H.</td> <td align="center">upper-alpha</td></tr>
+                                <tr><td align="center"></td> <td align="center">none</td></tr>
+                        </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>list-style</b> </td>
+                <td>
+                    <p class="text-p">
+                        Атрибут, позволяющий одновременно задать стиль маркера, его положение, а также изображение, которое
+                        будет использоваться в качестве маркера.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>counter-increment</b> </td>
+                <td>
+                    <p class="text-p">
+                        Увеличение значения счётчика приращений, который задается свойством <i>counter-reset</i>. Такой счётчик
+                        подсчитывает количество отображений элементов на странице. Может быть отображен, используя функцию
+                        <i>counter()</i> или <i>counters()</i> в свойстве <i>content</i> и псевдоэлементы <i>:after и :before</i>. 
+                        Это позволяет
+                        создавать многоуровневые списки, а также списки, в которых нумерация и вид задаются через стили.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>counter-reset</b> </td>
+                <td>
+                    <p class="text-p">
+                        Устанавливает идентификатор, в котором будет храниться счётчик отображений определенного элемента, а
+                        также начальное значение счётчика. Такой счётчик можно выводить с помощью функции <i>counter()</i> или
+                        <i>counters()</i> в свойстве <i>content</i> и псевдоэлементов <i>:after и :before</i>.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="0" width="100%" align="center">
+        <tr>
+            <th> <a href="./kod_CSS_0.html"> &#60 CSS-начало</a></th>
+            <th><a href="./kod_CSS_10.html"> CSS стили для эффектов &#62</a></th>
+        </tr>
+    </table>
+</body>
+
+</html>

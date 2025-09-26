@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>  p { margin-top: 0px; margin-bottom: 0px; }  </style>
+    <style>  .text-ul { margin-top: 0px; margin-bottom: 0px;  }  </style>
+    <style>  .text-p { margin-top: 0px; margin-bottom: 0px; text-indent: 50px } </style>
+    <style>  .text-dec {text-decoration: underline;}</style>
+    <title>CSS - текст</title>
+</head>
+
+<body>
+    <h2 align="center">CSS стили для текста </h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Тег</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center"> <b>box-decoration-break</b> </td>
+                <td>
+                    <p>Оформление фрагментов текста при его переносе на другую строку.</p>
+                    <ul class=text-ul >
+                        <p class="text-dec">Значения</p>
+                        <li> <i>clone</i> - Фрагменты оформляются независимо. </li>
+                        <li> <i>slice</i> - На месте переноса эффекты отображения не применяются (по умолчанию).</li>
+                    </ul>
+                    <p>Работает для background, border, border-image, box-shadow, clip-path, margin и padding.</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>color</b> </td>
+                <td>
+                    <p>Цвет текста.</p>
+                    <p class="text-p"> <i>color: red;</i></p>
+                    <p class="text-p"> <i>color: #ff0000;</i></p>
+                    <p class="text-p"> <i>color: rgb(255, 0, 0);</i></p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>font</b> </td>
+                <td>
+                    <p>Определяет сразу несколько параметров шрифта:</p>
+                    <p class="text-p"><i>[font-style||font-variant||font-weight] font-size [/line-height]</i></p>
+                    <p class="text-p"><i>font-family body {font: 14px sans-serif;}</i> - обязательные параметры </p>
+                    <p class="text-p"><i>span {font: italic normal bold 12px/1.2em Tahoma, Arial, sans-serif;}</i> - все
+                        параметры </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>font-family</b> </td>
+                <td>
+                    Задает шрифт или шрифтовое семейство, которым будет отображаться элемент.
+                    Если перечислены несколько шрифтов, то браузер сначала пытается отобразить текст первым из шрифтов,
+                    если же его нет на компьютере конечного пользователя, то - следующим, а если нет ни одного их
+                    перечисленных, то любым шрифтом из указанного семейства: "serif" (с засечками) или "sans-serif" (без
+                    засечек).
+                    <p class="text-p"><i>font-family: Georgia, Times New Roman, serif;</i></p>
+                    <p class="text-p"><i>font-family: Micra, Helvetica, Arial, sans-serif;</i></p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b> @font-face</b> </td>
+                <td>
+                    Внедрение в документ шрифта из внешнего файла.
+                    <p>@font-face {</p>
+                    <p class="text-p">font-family: 'Montserrat';</p>
+                    <p class="text-p">src: local('Montserrat Regular'),</p>
+                    <p class="text-p">url('/fonts/Montserrat-Regular.woff2') format('woff2'),</p>
+                    <p class="text-p">url('/fonts/Montserrat-Regular.woff') format('woff'),</p>
+                    <p class="text-p">url('/fonts/Montserrat-Regular.ttf') format('truetype');</p>
+                    <p class="text-p">font-weight: normal;</p>
+                    <p class="text-p">font-style: normal }</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>font-size</b> </td>
+                <td>
+                    Размер шрифта.
+                    Значение может указываться как в относительной (rem, em, %), так и в абсолютной величине (px).
+                    <p class="text-p"><i>font-size: 2rem;</i></p>
+                    <p class="text-p"><i>font-size: 1.5em;</i></p>
+                    <p class="text-p"><i>font-size: 100%;</i></p>
+                    <p class="text-p"><i>font-size: 16px;</i></p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>font-style</b> </td>
+                <td>
+                    Способ начертания шрифта.
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения</p>
+                        <li class="text-ul"> <i>normal</i> - нормальный (по умолчанию) </li>
+                        <li class="text-ul"> <i>italic</i> - курсив </li>
+                        <li class="text-ul"> <i>oblique</i> - наклонный.</li>
+                    </ul>
+                    <i>font-style: italic;</i>
+                    <p>
+                        Объектная модель:
+                        Object.style.fontStyle = "italic";
+                        document.getElementById("elementID").style.fontStyle = "italic"
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>font-variant </b> </td>
+                <td>
+                    Варианты начертания шрифта.
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения</p>
+                        <li> <i>normal</i> - нормальный (по умолчанию) </li>
+                        <li> <i>small-caps</i> - все буквы малые заглавные (КАПИТЕЛЬ) </li>
+                    </ul>
+                    <i>font-variant: small-caps;</i>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>font-weight</b> </td>
+                <td>Степень жирности шрифта.
+                    <p class="text-p text-dec">Значения</p>
+                    <p><i>bold | bolder | lighter | normal | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900</i></p>
+                    <p><i>font-weight: bolder;</i></p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>letter-spacing </b> </td>
+                <td>Интервал между буквами текста.
+                    <p class="text-p"><i>letter-spacing: 5px</i> - интервал увеличен на 5 пикселя</p>
+                    <p class="text-p"><i>letter-spacing: -.5px</i> - интервал, уменьшенный на 0.5 пикселя </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>hyphens</b> </td>
+                <td>Определяет расстановку переносов в словах.
+                    <p>Применяется только к тому элементу, у которого задан lang="ru", например, ко всему html.</p>
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения</p>
+                        <li><i>none</i> - Слова не переносятся никогда, даже при наличии мягких переносов &shy </li>
+                        <li><i>manual</i> - Слова переносятся только там, где добавлен shy; или wbr </li>
+                        <li><i>auto</i> - Слова переносятся автоматически на основе встроенного словаря переносов </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>line-height</b> </td>
+                <td>Интервал между строками текста.
+                    <p class="text-dec text-p">Значения</p>
+                    <p><i>normal | множитель | значение | проценты (от высоты шрифта)</i></p>
+                    <i>line-height: 1.5</i>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>overflow-wrap</b> </td>
+                <td>Устанавливает, переносить ли часть слова на новую строку, если слово целиком не помещается по ширине
+                    в заданную область.
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения</p>
+                        <li><i>normal</i> - Нормальный перенос слов (по умолчанию)</li>
+                        <li><i>break-word</i> - Слова, которые не помещаются целиком в заданную область, разрываются переносом
+                            строки </li>
+                    </ul>
+                    В отличии от word-break:break-all при overflow-wrap:break-word длинное слово не начнется в точке, в
+                    которой оно должно начинаться, а переносится на новую строку.
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>quotes</b> </td>
+                <td>Вид кавычек в теге &#60a href="text.php#q"&#62q&#60/a&#62.
+                    <ul class="text-ul">
+                        <p class="text-dec">Например:</p>
+                        <li> <i>q {quotes: "\00AB" "\00BB";}</i> /* Кавычки "ёлочки" */ </li>
+                        <li> <i>q {quotes: "\201E" "\201C";}</i> /* Кавычки "лапки" */ </li>
+                        <li> <i>q {quotes: "\2039" "\203A";}</i> /* Одинарные угловые кавычки */ </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>text-align</b> </td>
+                <td><p  style="text-align:justify;">Определяет выравнивание элемента.</p>
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения</p>
+                        <li><i>center</i> - по центру</li> 
+                        <li><i>justify</i> - по ширине контейнера</li>
+                        <li><i>left</i> - слева</li>
+                        <li> <i>right</i> - справа</li>
+                        <li><i>initial</i>-устанавливает свойство по умолчанию</li>
+                        <li><i>inherit</i>-значение наследуется от родителя</li>
+                    </ul>
+                    <p><i>text-align:justify;</i></p>
+                    <p><i>text-align: center;</i></p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>text-decoration</b> </td>
+                <td>Устанавливает эффекты оформления текста.
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения</p>
+                        <li><i>line-through</i> - перечеркнутый текст. </li>
+                        <li> <i>overline</i> - надчеркнутый текст. </li>
+                        <li> <i>underline</i> - подчеркнутый текст. </li>
+                        <li> <i>none</i> - отменяет все эффекты, в том числе и подчеркивания у ссылок, которое задано по
+                            умолчанию. </li>
+                    </ul>
+                    Можно применить одновременно несколько эффектов, перечисляя их через пробел
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>text-decoration-color</b> </td>
+                <td>Цвет линии, установленной свойством <i>text-decoration</i> или <i>text-decoration-line</i>.
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>text-decoration-line</b> </td>
+                <td>Устанавливает положение декоративной линии.
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения</p>
+                        <li> <i>line-through</i> - перечеркнутый текст,</li>
+                        <li> <i>overline</i> - надчеркнутый текст, </li>
+                        <li> <i>underline</i> - подчеркнутый текст, </li>
+                        <li> <i>none</i> - отменяет все эффекты, в том числе и подчеркивания у ссылок, которое задано по
+                            умолчанию. </li>
+                    </ul>
+                    Можно применить одновременно несколько эффектов, перечисляя их через пробел.
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>text-decoration-style</b> </td>
+                <td>Стиль линии, установленной свойством text-decoration или text-decoration-line.
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения</p>
+                        <li> <i>solid</i> - одинарная линия (по умолчанию),</li>
+                        <li> <i>double</i> - двойная линия, </li>
+                        <li> <i>dotted</i> - точечная линия, </li>
+                        <li> <i>dashed</i> - пунктирная линия, </li>
+                        <li> <i>wavy</i> - волнистая линия.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>text-decoration-thickness</b> </td>
+                <td>Толщина линии, установленной свойством <i>text-decoration</i> или <i>text-decoration-line</i>. 
+                    Задается в пикселях (px).
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>text-decoration-skip-ink</b> </td>
+                <td>Внешний вид подчеркивания, установленной свойством text-decoration или text-decoration-line.
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения</p>
+                        <li><i>none</i> - Линия пересекает глифы (выносные элементы символов). </li>
+                        <li> <i>auto</i> - Линия прерывается на глифах (по умолчанию). </li>
+                    </ul>
+                    Не входит в короткую запись <i>text-decoration</i>.
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>text-indent</b> </td>
+                <td>Отступ первой строки. Чаще всего используется для создания абзацев с красной строкой.
+                    <p class="text-p"><i>text-indent: значение | проценты (от ширины блока)</i></p>
+                    <p><i>text-indent: 50px;</i></p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>text-overflow</b> </td>
+                <td>Устанавливает способ обрезки текста, если он не помещается в заданную область. Работает, если
+                    overflow установлено, как auto, scroll или hidden, а white-space:nowrap.
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения</p>
+                        <li><i>clip</i> - Текст обрезается по размеру заданной области. </li>
+                        <li> <i>ellipsis</i> - Текст обрезается по размеру заданной области и в конце строки добавляется
+                            многоточие. </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>text-transform</b> </td>
+                <td>Задает преобразование регистра текста при отображении.
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения</p>
+                        <li> <i>capitalize</i> - Каждое слово в предложении будет начинаться с заглавной буквы. </li>
+                        <li><i>lowercase</i> - Все буквы текста будут строчными (нижний регистр). </li>
+                        <li> <i>uppercase</i> - ВСЕ БУКВЫ ТЕКСТА БУДУТ ПРОПИСНЫМИ (ВЕРХНИЙ РЕГИСТР).</li>
+                        <li><i>none</i> - Отменяет все эффекты. </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>text-underline-offset</b> </td>
+                <td>Позиция линии, установленной свойством <i>text-decoration</i> или <i>text-decoration-line</i>.
+                     Задается в пикселях (px).
+                    Не входит в короткую запись text-decoration.
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>vertical-align</b> </td>
+                <td>Вертикальное выравнивание элемента (не только текста).
+                    Применяется к ячейкам таблицы, элементам <i>table-cell</i>, <i>inline</i> и <i>inline-block</i>.
+                    Не применяется к flex-элементам и элементам, у которых задано свойство float.
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения</p>
+                    <li><i>baseline</i> - Выравнивает базовую линию элемента по базовой линии родительского элемента (по
+                        умолчанию). </li>
+                    <li> <i>sub</i> - Элемент сдвигается вниз (как нижний индекс, но размер шрифта не меняется).</li>
+                    <li> <i>super</i> - Элемент сдвигается вверх (как верхний индекс, но размер шрифта не меняется).</li>
+                    <li><i>text-top</i> - Верхняя граница элемента выравнивается по самой высокой части текста в текущей
+                        строке.</li>
+                    <li><i>text-bottom</i> - Нижняя граница элемента выравнивается по самой нижней части текста в текущей
+                        строке.</li>
+                    <li><i>top</i> - Верхняя граница элемента и его потомков выравнивается по верхней границе строк.</li>
+                    <li> <i>middle</i> - Центр элемента по вертикали выравнивается по нижней границе родительского элемена +
+                        половина высоты строчной буквы. </li>
+                    <li><i>bottom</i> - Нижняя граница элемента и его потомков будет выравниваться по нижней границе строки.
+                    </li>
+                    <li><i>значение</i> - Элемент сдвигается на указанную величину вверх или вниз относительно базовой лини.
+                    </li>
+                    <li> <i>проценты</i> - Элемент сдвигается на указанную величину (процент от значения line-height) вверх ии
+                        вниз относительно базовой линии. </li>
+                    </ul>
+                    <ul class="text-ul"> 
+                        <p class="text-dec">Значения (для ячеек таблиц)</p>
+                        <li><i>top</i> - Ячейка выравнивается по верху строки таблицы.</li>
+                        <li><i>middle</i> - Ячейка выравнивается по середине строки таблицы.</li>
+                        <li><i>bottom</i> - Ячейка выравнивается по низу строки таблицы.</li>
+                    </ul>
+                    <p class="text-dec text-p">Примеры</p>
+                        <p> td {vertical-align: top;} </p>
+                        <p> div {vertical-align: middle} /* бесполезно, т.к. div - блок */ </p>
+                        <p> input {vertical-align: 100px;} </p>
+                        <p> span {vertical-align: 50%;} </p>
+                        <p>img {vertical-align: -300px;}</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>white-space</b> </td>
+                <td>Устанавливает, как отображать пробелы между словами. В обычных условиях любое количество пробелов в
+                    коде HTML показывается на Web-странице как один. Исключением является тег
+                    <i>pre:</i> помещенный в этот контейнер текст выводится со всеми пробелами, как он был отформатирован
+                    пользователем.
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения</p>
+                        <li><i>normal</i> - Текст в окне браузера выводится как обычно, переносы строк устанавливаются
+                            автоматически. </li>
+                        <li><i>nowrap</i> - Переносы строк в коде HTML игнорируются, весь текст отображается одной строкой,
+                            вместе с тем, добавление тега <i>br</i> переносит текст на новую строку.</li>
+                        <li><i>pre</i> - Текст показывается с учетом всех пробелов и переносов, как они были добавлены
+                            разработчиком в коде HTML. Если строка получается слишком длинной и не помещается 
+                            в окне браузера, то будет добавлена горизонтальная полоса прокрутки. 
+                            Таким образом, <i>white-space:pre</i> имитирует работу тега <i>pre</i>, 
+                            но в отличие от него не меняет шрифт на моноширинный.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>word-break</b> </td>
+                <td>Устанавливает, переносить ли часть слова на новую строку, если слово целиком не помещается по ширине
+                    в заданную область.
+                    <ul class="text-ul">
+                        <p class="text-dec">Значения</p>
+                        <li><i>normal</i> - Перенос строк устанавливается по умолчанию. </li>
+                        <li><i>break-all</i> - Слова, которые не помещаются целиком в заданную область, разрываются переносом
+                            строки. Не работает для китайского, корейского и японского текста. </li>
+                        <li><i>keep-all</i> - Запрещает перенос строк в словах китайского, корейского и японского текста. Для
+                            остальных работает как normal. </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>word-spacing</b> </td>
+                <td>Интервал между словами.
+                    <p><i>word-spacing: 10px;</i></p>
+                    Можно использовать отрицательные значения.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="0" width="100%" align="center">
+        <tr>
+            <th> <a  href="./kod_CSS_0.html"> &#60 CSS-начало</a></th>
+            <th><a href="./kod_CSS_2.html"> CSS - стили для фона&#62</a></th>
+        </tr>
+    </table>
+</body>
+
+</html>

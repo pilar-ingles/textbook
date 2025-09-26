@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> p { margin-top: 0px;margin-bottom: 0px; } </style>
+    <style> .text-ul { margin-top: 0px; margin-bottom: 0px; }   </style>
+    <style> .text-p { margin-top: 0px; margin-bottom: 0px; text-indent: 50px; }  </style>
+    <style> .text-dec { text-decoration: underline; } </style>
+    <title>CSS - рамки (границы)</title>
+</head>
+
+<body>
+    <h2 align="center">CSS стили для рамок (границ) </h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th width="150px">Тег</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center"> <b>background-image</b> </td>
+                <td>Это не ошибка!
+                    <p class="text-p">  CSS-свойства можно использовать не только по прямому назначению.
+                        С помощью градиента можно сделать интересные рамки. </p>
+                    Например: Рамка только по углам элемента  </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>border-color</b> </td>
+                <td><p class="text-p">Цвет границы.</p>
+                    <p>Может принимать значение <i>transparent</i> для задания невидимой, но имеющей ширину границы, что иногда
+                        полезно.</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>
+                        <p>border-bottom-color,</p>
+                        <p>border-left-color,</p>
+                        <p>border-right-color,</p>
+                        <p>border-top-color</p>
+                    </b> </td>
+                <td><p class="text-p">Цвет границы снизу, слева, справа, сверху элемента соответственно.</p>
+                    <p>Например: <i>div {border-right-color: red; border-left-color: green;}</i></p>
+                    Объектная модель: document.getElementById("elementID").style.borderBottomColor
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>border-style</b> </td>
+                <td><p class="text-p">Задает стиль границы.</p>
+                    <p class="text-dec">Значения:</p>
+                    <p><i>none</i> - рамка отсутствует (значение по умолчанию)</p>
+                    <p><i>hidden</i> - граница скрыта, но она занимает место</p>
+                    <p><i>dotted</i> - точечная рамка</p>
+                    <p><i>dashed</i> - пунктирная рамка</p>
+                    <p><i>solid</i> - сплошная линия границы</p>
+                    <p><i>double</i> - двойная рамка</p>
+                    <p><i>groove</i> - объёмная рифлёная вдавленная рамка</p>
+                    <p><i>ridge</i> - объёмная рифлёная выпуклая рамка</p>
+                    <p><i>inset</i> - объёмная вдавленная рамка</p>
+                    <p><i>outset</i> - объёмная выпуклая рамка</p>
+                    Например: <i>div {border-style: dashed;}</i>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>
+                        <p>border-bottom-style,</p>
+                        <p>border-left-style,</p>
+                        <p>border-right-style,</p>
+                        <p>border-top-style</p>
+                    </b> </td>
+                <td><p class="text-p">Стиль границы снизу, слева, справа, сверху элемента соответственно.</p>
+                    <p>Например: <i>div {border-right-style: dashed; border-left-style: solid;}</i></p>
+                    Объектная модель: document.getElementById("elementID").style.borderBottomStyle
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>border-width</b> </td>
+                <td><p class="text-p">Ширина границы.</p>
+                    <p>
+                        Может быть задана значением в пикселях,процентах или с помощью зарезервированных слов:
+                        <i>thin (тонкая)| medium (средняя)| thick (толстая)</i>
+                    </p>
+                    Например: <i>div {border-width: 2px;}</i>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>
+                        <p>border-bottom-width,</p>
+                        <p>border-left-width,</p>
+                        <p>border-right-width,</p>
+                        <p>border-top-width</p>
+                    </b> </td>
+                <td><p class="text-p">Ширина границы снизу, слева, справа, сверху элемента соответственно.</p>
+                    <p>Например: <i>div {border-right-width: 1px; border-left-width: 2px;}</i></p>
+                    Объектная модель: document.getElementById("elementID").style.borderBottomWidth
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>border</b> </td>
+                <td><p class="text-p">Ширина, стиль и цвет границы вокруг элемента.</p>
+                    <p><i>border: [border-width || border-style || border-color]</i></p>
+                    Например: <i>div {border: 4px double #990;}</i>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>
+                        <p>border-bottom,</p>
+                        <p>border-left,</p>
+                        <p>border-right,</p>
+                        <p>border-top</p>
+                    </b> </td>
+                <td><p class="text-p">Ширина, стиль и цвет границы соответственно снизу, слева, справа, сверху элемента.</p>
+                    <p>Например: <i>div {border-right: 2px solid red;}</i></p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>border-radius</b> </td>
+                <td><p class="text-p">Pадиус скругления углов рамки и фона элемента.</p>
+                    Можно использовать одно, два, три или четыре значения, разделяя их между собой пробелом.
+                    <table border="1">
+                        <tr>
+                            <th>Число значений</th>
+                            <th>Результат</th>
+                        </tr>
+                        <tr>
+                            <td align="center">1</td>
+                            <td>Радиус устанавливается для всех четырех углов.</td>
+                        </tr>
+                        <tr>
+                            <td align="center">2</td>
+                            <td>Первое значение устанавливает радиус верхнего левого и нижнего правого угла, второе -
+                                верхнего правого и нижнего левого угла.</td>
+                        </tr>
+                        <tr>
+                            <td align="center">3</td>
+                            <td>Первое значение устанавливает радиус верхнего левого угла, второе - одновременно
+                                верхнего правого и нижнего левого, а третье - нижнего правого угла.</td>
+                        </tr>
+                        <tr>
+                            <td align="center">4</td> 
+                            <td> Поочередно устанавливаются радиусы верхнего левого, верхнего правого, нижнего
+                                правого и нижнего левого угла. </td>
+                        </tr> </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>border-image</b> </td>
+                <td><p class="text-p">Рамка-изображение.</p>
+                    <ul class="text-ul">
+                        Определяет сразу несколько параметров рамки: 
+                        <li>рисунок для рамки (или градиент)</li> 
+                        <li>размер элементов рисунка для рамки</li> 
+                        <li>тип повтора рисунка рамки</li>
+                        <li> ширину рамки</li>
+                        <li> смещение рамки</li>
+                    </ul>
+                       <i>
+                            [border-image-source || border-image-width || border-image-slice || border-image-repeat ||
+                            border-image-outset]
+                       </i>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>border-image-source</b> </td>
+                <td><p class="text-p">URL рисунка для рамки или градиент.</p>
+                    Пример рамки-изображения
+                    В качестве изображения можно использовать градиент.
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>border-image-width</b> </td>
+                <td><p class="text-p">Ширина рамки.</p>
+                    <ul class="text-ul"> 
+                        <p class="text-dec">Значения:</p>
+                        <li><i>толщина</i> - Ширина рамки в px или em (аналог свойства border-width)</li>
+                        <li><i>число</i> - Число, на которое умножается значение свойства border-width</li>
+                        <li><i>%</i> - Ширина рамки относительно размеров элемента. Горизонтальные размеры относительно ширины,
+                            вертикальные – относительно высоты</li>
+                        <li><i>auto</i> - Ширина рамки равна значению border-image-slice</li>
+                    </ul>
+                    Можно использовать одно, два, три или четыре значения, разделяя их между собой пробелом.
+                    <table border="1">
+                    <tr>
+                        <th>Число значений</th>
+                        <th>Результат</th>
+                    </tr> 
+                    <tr>
+                        <td align="center">1</td>
+                        <td>Рамка одинаковой толщины на всех сторонах.</td>
+                    </tr>
+                    <tr>
+                        <td align="center">2</td>
+                        <td>Первое значение устанавливает толщину верхней и нижней стороны рамки, второе - левой и правой.</td>
+                    </tr>
+                    <tr>
+                        <td align="center">3</td>
+                        <td>Первое значение устанавливает толщину верхней стороны рамки, второе - левой и правой, а третье -
+                            нижней.</td>
+                    </tr>
+                    <tr>
+                        <td align="center">4</td>
+                        <td>Первое значение устанавливает толщину верхней стороны рамки, второе - правой, третье - нижней, а
+                            четвертое - левой.</td>
+                    </tr>
+                </table>
+                    Пример
+                    Если border-image-width > border-width, то рамка заползет под содержимое.
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>border-image-slice</b> </td>
+                <td><p class="text-p">Размер элементов рисунка для рамки.</p>
+                    <ul class="text-ul"><p class="text-dec">Значения:</p>
+                        <li><i>число</i> - Значения, которые указывают в пикселях размеры частей рисунка для рамки, задавая тем самым
+                            области деления. <p>Единицы (px) не пишутся, т.е. 30, а не 30px</p></li>
+                        <li><i>%</i> - Размеры частей рисунка в пикселях относительно размеров рисунка. Горизонтальные относительно
+                            ширины, вертикальные – относительно высоты</li>
+                        <li><i>fill</i> - Обозначает, что рисунок не обрезается внутренним краем рамки, а заполняет также область
+                            внутри рамки (задается вместе с числом или процентами)</li>
+                    </ul>
+                    Пример значения в пикселях и в процентах
+                    Можно использовать одно, два, три или четыре значения, разделяя их между собой пробелом.
+                    <table border="1"> <tr>
+                        <th>Число значений</th>
+                        <th>Результат</th>
+                    </tr>
+                        <tr>
+                            <td align="center">1</td>
+                            <td>Область одинаковой толщины со всех сторон рисунка</td>
+                        </tr>
+                        <tr>
+                            <td align="center">2</td>
+                            <td>Первое значение устанавливает толщину верхней и нижней области рисунка, второе - левой и правой</td>
+                        </tr>
+                        <tr>
+                            <td align="center">3</td>
+                            <td>Первое значение устанавливает толщину верхней области рисунка, второе - левой и правой, а третье -
+                                нижней</td>
+                        </tr>
+                        <tr>
+                            <td align="center">4</td>
+                            <td>Первое значение устанавливает толщину верхней области рисунка, второе - правой, третье - нижней, а
+                                четвертое - левой</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>border-image-repeat</b> </td>
+                <td><p class="text-p">Тип повтора рисунка между углами рамки.</p>
+                    <ul class="text-ul"><p class="text-dec">Значения:</p>
+                    <li><i>tretch</i> – Рисунок растягивается (по умолчанию)</li>
+                    <li><i>repeat</i> – Рисунок повторяется</li>
+                    <li><i>round</i> – Рисунок повторяется и масштабируется, чтобы рамки состояла из целого числа рисунков</li>
+                    <li><i>space</i> – Аналогично repeat</li>
+                </ul>
+                <p>
+                    Можно задать одно значение для всех частей рамки, а можно два, тогда первое будет отвечать за
+                        повторение изображения в верхней и нижней части, второе – в левой и правой.
+                </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>border-image-outset</b> </td>
+                <td><p class="text-p">Отступ рамки-изображения.</p>
+                    <ul class="text-ul"><p class="text-dec">Значения:</p>
+                    <li><i>величина</i> - отступ рамки за пределы границ элемента в px или em</li>
+                    <li><i>число</i> - число, на которое умножается значение свойства border-width, для задания отступа</li>
+                </ul>
+                <p> Можно использовать одно, два, три или четыре значения, разделяя их между собой пробелом.</p>
+                    <table border="1">
+                        <tr><th>Число значений</th> <th>Результат</th></tr>
+                        <tr><td align="center">1</td> <td>Отступ одинакового размера от всех сторон элемента</td></tr>
+                        <tr>
+                            <td align="center">2</td> 
+                            <td>
+                                Первое значение устанавливает отступ от верхней и нижней стороны элемента, второе - от левой и
+                                правой
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">3</td> 
+                            <td>
+                                Первое значение устанавливает отступ от верхней стороны элемента, второе - от левой и правой, а
+                                третье - от нижней
+                            </td>
+                        </tr>
+                       <tr>
+                            <td align="center">4</td> 
+                            <td>
+                                Первое значение устанавливает отступ от верхней стороны элемента, второе - от правой, третье - от
+                                нижней, а четвертое - от левой
+                            </td>
+                       </tr>
+                    </table>
+                    Рамка при определенных значениях border-image-outset может перекрывать соседние элементы.
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>outline-color</b> </td>
+                <td><p class="text-p">Цвет внешней рамки элемента. </p>
+                    <p>Применяется сразу ко всем четырём сторонам.</p>
+                    <p>Например: <i>div {outline-color: #990;}</i></p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>outline-style</b> </td>
+                <td><p class="text-p">Стиль внешней рамки элемента.</p> 
+                    <p>Применяется сразу ко всем четырём сторонам.</p>
+                    <p>Например: <i>div {outline-style: double;}</i></p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>outline-width</b> </td>
+                <td><p class="text-p">Ширина внешней рамки элемента.</p> 
+                    <p>Применяется сразу ко всем четырём сторонам.</p>
+                    <p >Например: <i>div {outline-width: 4px;}</i></p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>outline</b> </td>
+                <td>Ширина, стиль и цвет внешней рамки элемента.
+                    <i>outline: [outline-width || outline-style || outline-color]</i>
+                    Применяется сразу ко всем четырём сторонам.
+                    <p class="text-p">Например: div {outline: 4px double #990;}</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> <b>outline-offset</b> </td>
+                <td><p class="text-p">Отступ внешней рамки <i>outline</i> от границы элемента <i>border</i>, заданный в px или em.</p>
+                    <p>При отрицательнном значении отступа внешняя рамка отображается внутри элемента.</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="0" width="100%" align="center">
+        <tr>
+            <th> <a href="./kod_CSS_0.html"> &#60 CSS-начало</a></th>
+            <th><a href="./kod_CSS_5.html"> CSS стили для горизонтальной разделительной линии &#62</a>
+            </th>
+        </tr>
+    </table>
+</body>
+
+</html>
